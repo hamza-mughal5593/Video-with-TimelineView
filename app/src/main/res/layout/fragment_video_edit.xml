@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.VideoEditFragment">
+
+        <RelativeLayout
+            android:layout_above="@+id/txtVideoTrimSeconds"
+            android:id="@+id/llVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp">
+
+<FrameLayout
+    android:id="@+id/videoFrame"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+</FrameLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgPlay"
+                            android:layout_width="80dp"
+                            android:background="@drawable/pause"
+                            android:layout_height="80dp" />
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/footermain"
+            android:id="@+id/txtVideoTrimSeconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="00:00 - 00:10"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/footermain"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+                <com.example.videotimelineviewtask.timelineView.TimelineView
+                    android:id="@+id/time_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" />
+
+                <com.example.videotimelineviewtask.timelineView.CustomRangeSeekBar
+                    android:id="@+id/timeLineBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+</RelativeLayout>
